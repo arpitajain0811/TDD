@@ -11,7 +11,7 @@ function sumArray(a ,b){
   }
   var c=[];
   for(var i=0;i<5;i++){
-    c[i]=a[i]+b[i];
+
   }
   return c;
 }
@@ -39,6 +39,7 @@ console.log("the sum is right",isEqual(sumArray([1,2,3,4,5],[2,3,4,5,6]),[ 3, 5,
 console.log("unequal array lengths",sumArray([1,2,3,4],[2,3,4,5,6])===null);
 console.log("input not an array",sumArray("abc",[2,3,4,5,6])===null);
 console.log("input not an array",sumArray([2,3,4,5,6],undefined)===null);
+console.log("input element not a number",sumArray([1,2,3,4,'a'],[1,2,3,4,5])===null);
 
 function isEqual(a,b)
 {
