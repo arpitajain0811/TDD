@@ -1,27 +1,46 @@
-function sumarray(a ,b){
-if(a.length!=b.length)
-{
+function sumArray(a ,b){
+
+  if(!valid(a)||!valid(b))
+  {
+    return null;
+  }
+  if(a.length!=b.length)
+  {
     console.log("Unable to add as length of arrays is unequal.");
     return null;
-}
-var c=[];
-for(var i=0;i<5;i++){
-  c[i]=sum(a[i],b[i]);
-}
+  }
+  var c=[];
+  for(var i=0;i<5;i++){
+    c[i]=a[i]+b[i];
+  }
   return c;
 }
-function sum(a,b)
-{
-  return a+b;
+
+function valid(a){
+  if(!Array.isArray(a)){
+      console.log("Input not an array.");
+      return false;
+    }
+  else {
+    for(let i=0;i<a.length;i++)
+    {
+      if(typeof a[i]!==Number && a[i]===NaN){
+        console.log("array elements must be numbers")
+        return false;
+      }
+    }
+    return true;
+  }
 }
 
-console.log("the sum is right",isequal(sumarray([1,2,3,4,5],[2,3,4,5,6]),[ 3, 5, 7, 9, 11 ])===true);
-console.log("unequal array lengths",sumarray([1,2,3,4],[2,3,4,5,6])===null);
-console.log("unequal array lengths",sumarray([1,2,3,4],[2,3,4,5,6])===null);
-console.log("array elements not numbers",sumarray([1,2,3,4,'c'],[2,3,4,5,6])===null);
 
 
-function isequal(a,b)
+console.log("the sum is right",isEqual(sumArray([1,2,3,4,5],[2,3,4,5,6]),[ 3, 5, 7, 9, 11 ])===true);
+console.log("unequal array lengths",sumArray([1,2,3,4],[2,3,4,5,6])===null);
+console.log("input not an array",sumArray("abc",[2,3,4,5,6])===null);
+console.log("input not an array",sumArray([2,3,4,5,6],undefined)===null);
+
+function isEqual(a,b)
 {
   for(var i=0;i<5;i++)
   {
