@@ -24,8 +24,8 @@ function valid(a){
   else {
     for(let i=0;i<a.length;i++)
     {
-      if(typeof a[i]!==Number && a[i]===NaN){
-        console.log("array elements must be numbers")
+      if(typeof a[i]!=='number' || a[i]===NaN){
+        console.log("array elements must be numbers");
         return false;
       }
     }
@@ -43,9 +43,9 @@ console.log("input element not a number",sumArray([1,2,3,4,'a'],[1,2,3,4,5])===n
 
 function isEqual(a,b)
 {
-  for(var i=0;i<5;i++)
+  for(var i=0;i<a.length;i++)
   {
-    if(a[i]!=b[i])
+    if(a[i]!==b[i])
     return false;
   }
   return true;
