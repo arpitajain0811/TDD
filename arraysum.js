@@ -17,6 +17,9 @@ function sum(a,b)
 
 console.log("the sum is right",isequal(sumarray([1,2,3,4,5],[2,3,4,5,6]),[ 3, 5, 7, 9, 11 ])===true);
 console.log("unequal array lengths",sumarray([1,2,3,4],[2,3,4,5,6])===null);
+console.log("unequal array lengths",sumarray([1,2,3,4],[2,3,4,5,6])===null);
+console.log("array elements not numbers",sumarray([1,2,3,4,'c'],[2,3,4,5,6])===null);
+
 
 function isequal(a,b)
 {
