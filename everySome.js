@@ -10,3 +10,4 @@ function checkUsersValid(goodUsers){
 module.exports=checkUsersValid;
 
 console.log(checkUsersValid([{id:1},{id:3},{id:5}])([{id:1},{id:3}])===true);
+console.log(checkUsersValid([{id:1},{id:3},{id:5}])([{id:1},{id:3},{id:4}])===false);
