@@ -1,0 +1,22 @@
+{
+  "name": "tdd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "arraysum.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arpitajain0811/TDD.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arpitajain0811/TDD/issues"
+  },
+  "homepage": "https://github.com/arpitajain0811/TDD#readme",
+  "devDependencies": {
+    "eslint": "^4.15.0"
+  }
+}
