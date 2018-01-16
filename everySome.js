@@ -3,9 +3,9 @@ function checkUsersValid(goodUsers){
     return submittedUsers.every(function(user){
       return goodUsers.some(function(good_user){
         return user.id===good_user.id;
-      })
-    })
-  }
+      });
+    });
+  };
 }
 module.exports=checkUsersValid;
 

@@ -3,17 +3,16 @@ module.exports = {
         "browser": true,
         "es6": true
     },
-    "extends": "eslint:recommended",
+    // "extends": "eslint:recommended",
     "parserOptions": {
         "sourceType": "module"
     },
     "rules": {
         "indent": [
-            "error",
-            "space"
+            "error", 2, { "FunctionDeclaration": {"body": 1, "parameters": 2} }
         ],
         "no-var": "error",
-        "no-console": "allow",
+        "no-console": 0,
         "linebreak-style": [
             "error",
             "unix"
