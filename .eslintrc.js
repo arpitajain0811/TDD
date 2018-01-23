@@ -1,9 +1,21 @@
 module.exports = {
-    "extends": "standard",
+    "extends": "airbnb-base",
+
+    "env": {
+      "jest" : true
+    },
+    //   "es6" : true,
+    //   "node" :true
+    // },
     "rules": {
-           "semi": [
-               "error",
-               "always"
-           ]
+    //       "quotes": [
+    //           "error",
+    //           "single"
+    //         ],
+    //        "semi": [
+    //            "error",
+    //            "always"
+    //        ],
+           "no-console" : "off"
        }
 };

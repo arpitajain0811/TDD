@@ -1,10 +1,10 @@
 {
   "name": "tdd",
   "version": "1.0.0",
-  "description": "",
-  "main": "arraysum.js",
+  "main": "sum.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -20,9 +20,13 @@
     "eslint": "^4.15.0",
     "eslint-config-recommended": "^2.0.0",
     "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-node": "^5.2.1",
     "eslint-plugin-promise": "^3.6.0",
-    "eslint-plugin-standard": "^3.0.1"
-  }
+    "eslint-plugin-standard": "^3.0.1",
+    "jest": "^22.1.3"
+  },
+  "dependencies": {},
+  "description": ""
 }
