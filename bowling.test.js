@@ -74,4 +74,10 @@ describe('input validation', () => {
       expect(bowlingScoreBoard(inputScoreArray)).toEqual('invalid turn');
     });
   }
+  {
+    const inputScoreArray = [];
+    it('null array passed', () => {
+      expect(bowlingScoreBoard(inputScoreArray)).toEqual('empty input');
+    });
+  }
 });

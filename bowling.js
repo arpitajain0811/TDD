@@ -1,4 +1,4 @@
-const verify = (rolls) => {
+const verifyIndividualScore = (rolls) => {
   for (let i = 0; i < rolls.length; i += 1) {
     if (rolls[i] > 10) return false;
   }
@@ -19,7 +19,8 @@ const lastTurn = (i, scoreLength) => {
 const calculateBowlingScore = (rolls) => {
   const scoreLength = rolls.length;
   let turnCount = 0;
-  if (!verify(rolls)) return 'invalid';
+  if (scoreLength === 0) return 'empty input';
+  if (!verifyIndividualScore(rolls)) return 'invalid';
   let i = 0;
   let currentScore = 0;
   while (i < scoreLength - 1) {
