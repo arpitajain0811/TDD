@@ -13,7 +13,7 @@ const spare = (thisRoll, nextRoll) => {
   return 0;
 };
 const lastTurn = (i, scoreLength) => {
-  if (i + 2 >= scoreLength) return true;
+  if (i + 3 >= scoreLength) return true;
   return false;
 };
 const calculateBowlingScore = (rolls) => {
@@ -29,8 +29,8 @@ const calculateBowlingScore = (rolls) => {
     const nextRoll = rolls[i + 1];
     if (strike(thisRoll)) {
       if (lastTurn(i, scoreLength)) {
-        currentScore += thisRoll + nextRoll;
-        i += 2;
+        currentScore += thisRoll + nextRoll + rolls[i + 2];
+        i += 3;
       } else {
         currentScore += thisRoll + nextRoll + rolls[i + 2];
         i += 1;

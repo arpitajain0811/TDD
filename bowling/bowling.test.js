@@ -8,9 +8,9 @@ describe('calculating bowling score for no spares and strikes', () => {
     });
   }
   {
-    const inputScoreArray = [3, 6, 4, 5, 5, 3, 7, 1, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6];
+    const inputScoreArray = [3, 6, 4, 6, 5, 3, 7, 1, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6];
     it('Calculates bowling score when sum of some adjacent rolls is 10', () => {
-      expect(bowlingScoreBoard(inputScoreArray)).toEqual(88);
+      expect(bowlingScoreBoard(inputScoreArray)).toEqual(94);
     });
   }
 });
@@ -37,21 +37,21 @@ describe('calculating bowling score with strikes', () => {
     });
   }
   {
-    const inputScoreArray = [3, 6, 3, 6, 3, 6, 10, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 10, 5];
+    const inputScoreArray = [3, 6, 3, 6, 3, 6, 10, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 10, 5, 4];
     it('With a strike in the last turn', () => {
-      expect(bowlingScoreBoard(inputScoreArray)).toEqual(106);
+      expect(bowlingScoreBoard(inputScoreArray)).toEqual(110);
     });
   }
   {
-    const inputScoreArray = [3, 6, 3, 6, 3, 6, 10, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 10, 10];
-    it('With a strike in the last turn and spare in fill ball', () => {
-      expect(bowlingScoreBoard(inputScoreArray)).toEqual(111);
+    const inputScoreArray = [3, 6, 3, 6, 3, 6, 10, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 10, 10, 10];
+    it('With a strike in the last turn and strike in fill ball', () => {
+      expect(bowlingScoreBoard(inputScoreArray)).toEqual(121);
     });
   }
   {
-    const inputScoreArray = [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10];
+    const inputScoreArray = [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10];
     it('With all strikes', () => {
-      expect(bowlingScoreBoard(inputScoreArray)).toEqual(290);
+      expect(bowlingScoreBoard(inputScoreArray)).toEqual(300);
     });
   }
 });
