@@ -69,6 +69,12 @@ describe('input validation', () => {
     });
   }
   {
+    const inputScoreArray = [3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 6, 3, 6, 3, 6, 3, 10, 10];
+    it('has incorrect number of turns', () => {
+      expect(bowlingScoreBoard(inputScoreArray)).toEqual('invalid number of turns');
+    });
+  }
+  {
     const inputScoreArray = [3, 6, 3, 6, 3, 8, 3, 6, 3, 6, 3, 6, 6, 3, 6, 3, 6, 3, 6, 3];
     it('more than 10 points in a turn', () => {
       expect(bowlingScoreBoard(inputScoreArray)).toEqual('invalid turn');

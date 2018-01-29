@@ -29,6 +29,7 @@ const calculateBowlingScore = (rolls) => {
     const nextRoll = rolls[i + 1];
     if (strike(thisRoll)) {
       if (lastTurn(i, scoreLength)) {
+        if (i + 2 > scoreLength - 1) return 'invalid number of turns';
         currentScore += thisRoll + nextRoll + rolls[i + 2];
         i += 3;
       } else {
