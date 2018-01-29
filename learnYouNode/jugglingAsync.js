@@ -3,7 +3,7 @@ const bl = require('bl');
 
 const juggleAsync = (urls, callback) => {
   let count = 0;
-  if (urls.length !== 3) callback('need 3 URLs as input');
+  if (urls.length !== 3) return callback('need 3 URLs as input');
   const responseArray = [];
   const juggle = (input) => {
     http.get(urls[input], (response) => {
@@ -14,7 +14,7 @@ const juggleAsync = (urls, callback) => {
         responseArray[input] = dataString;
         // console.log('hi1');
         if (count === 3) {
-          callback(responseArray);
+          return callback(responseArray);
           // for (let i = 0; i < 3; i += 1) { console.log(responseArray[i]); }
         }
       }));
