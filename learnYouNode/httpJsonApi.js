@@ -3,7 +3,6 @@ const url = require('url');
 
 
 const server = http.createServer((req, res) => {
-  // request handling logic...
   let result;
   const urlObject = url.parse(req.url, true);
   if (urlObject.pathname === '/api/unixtime') {

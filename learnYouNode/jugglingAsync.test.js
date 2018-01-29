@@ -1,4 +1,4 @@
-// const juggling = require('./jugglingAsync.js');
+const juggling = require('./jugglingAsync.js');
 //
 // describe('collect data from 3 given URLs', () => {
 //   it('returns correct sequence on giving valid URLs as input', (done) => {
@@ -28,3 +28,13 @@
 //     juggling([], call);
 //   });
 // });
+describe('unit testing the syncronous function', () => {
+  it('returns correct sequence on giving valid URLs as input', (done) => {
+    const call = (data) => {
+      expect(data).toMatch(['<!doctype html>']);
+      done();
+    };
+    const inputURL = 'http://www.example.com';
+    juggling([inputURL, inputURL, inputURL], call);
+  });
+});
