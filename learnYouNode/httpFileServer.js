@@ -8,3 +8,4 @@ const server = http.createServer((req, res) => {
   readStream.pipe(res);
 });
 server.listen(portNumber);
+// test for starting a server and invalid stream(null, undefined)

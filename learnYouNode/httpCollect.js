@@ -6,9 +6,9 @@ const collect = (url, callback) => {
   // response.setEncoding('utf8');
     response.pipe(bl((err, data) => {
       const dataString = data.toString();
-      // console.log(dataString.length);
-      // console.log(dataString);
-      callback(dataString.length, dataString);
+      console.log(dataString.length);
+      console.log(dataString);
+      callback(null, 'response piped');
     }));
   });
 };

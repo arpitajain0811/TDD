@@ -1,6 +1,6 @@
 const rejectPromise = require('./rejectPromise.js');
 
-describe('Functionality of setTimeout: ', () => {
+describe('Functionality of promises: ', () => {
   // jest.useFakeTimers();
   // it('calls setTimeout for 1 time: ', () => {
   //   rejectPromise();
