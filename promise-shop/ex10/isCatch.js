@@ -1,2 +1,6 @@
 const iterate = input => input + 1;
-module.exports = iterate;
+const alwaysThrows = () => {
+  throw new Error('OH NOES');
+};
+
+module.exports = { iterate, alwaysThrows };
