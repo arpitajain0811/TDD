@@ -17,3 +17,12 @@ describe('testing function alwaysThrow', () => {
     expect(errorMsg()).toEqual('OH NOES');
   });
 });
+describe('checking if alwaysThrow is called after 5 calls to iteration', () => {
+  it('returns error after 1,2,3,4,5', (done) => {
+    const call = (data) => {
+      expect(data).toEqual('12345OH NOES');
+      done();
+    };
+    isCatch.itCatches(call);
+  });
+});
